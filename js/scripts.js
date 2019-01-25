@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputNum = parseInt($("#input").val());
-    // var a = [];
+    var a = [];
     // var b = [];
     // var c = [];
 
@@ -18,39 +18,43 @@ $(document).ready(function() {
     var numList = [];
     for (var i = 0; i <= inputNum; i++) {
       numList.push(i);
-    }
-
-//KEEP  --------------------------------------v
-      for (var j = 0; j <= inputNum; j++) {
-        if (numList[j] % 3 === 0 && numList[j] !== 0) {
-          numList.splice(j, 1, "HAL");
-        }
+      if (numList[i] % 3 === 0 && numList[i] !== 0) {
+        numList.splice(i, 1, "HAL");
       }
-//KEEP  --------------------------------------^
+    }
 
-      for (var k = 0; k <= inputNum; k++) {
-        // if (numList.filter(item => item.includes(0))) {
-        //   alert("scream");
-        //   numList.splice(j, 1, "j");
-//         }
-        // if(numList[j].indexOf(0) != -1) {
-        //   alert(numList[j]);
-        // }
+
+
+      //   else if (numList[j] % 3 !== 0) {
+      //     a.push(j);
+      //     a.toString();
+      //     alert(scream);
+      //     if (a.includes("0")) {
+      //       numList.splice(j, 1, "Beep!");
+      //       a.split(" ");
+      //       a.shift();
+      //       alert(scream);
+      //     }
+      //     else {
+      //       alert(scream);
+      //       a.split(" ");
+      //       a.shift();
+      //     }
+      //   }
       // }
-    }
-    alert(numList.indexOf(0));
 
 
 
-    for (var j = 0; j < inputNum; j++) {
-      
-        if (numList[j].includes(1)) {
-          numList.splice(j, 1, "Boop!");
-        }
-        else if (numList[j].includes(0)) {
-          numList.splice(j, 1, "Beep!");
-        }
-    }
+
+
+
+
+
+
+
+
+
+
 
     alert(numList.length);
     $("#result").show().text(numList);
