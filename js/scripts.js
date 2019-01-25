@@ -1,8 +1,7 @@
 //  Responses:
-//  "Beep!"
-//  "Boop!"
 //  "I'm sorry, Dave. I'm afraid I can't do that."
-
+//  "Boop!"
+//  "Beep!"
 
 
 $(document).ready(function() {
@@ -19,29 +18,39 @@ $(document).ready(function() {
     var numList = [];
     for (var i = 0; i <= inputNum; i++) {
       numList.push(i);
-      for (var j = 0; j <= inputNum; j++) {
-        // if (numList[j] % 3 === 0 && numList[j] !== 0) {
-        //   numList.splice(j, 1, "HAL");
-        // }
-        if (numList.includes(0)) {
-          numList.splice(j, 1, "j");
-        }
-      }
     }
 
+//KEEP  --------------------------------------v
+      for (var j = 0; j <= inputNum; j++) {
+        if (numList[j] % 3 === 0 && numList[j] !== 0) {
+          numList.splice(j, 1, "HAL");
+        }
+      }
+//KEEP  --------------------------------------^
+
+      for (var k = 0; k <= inputNum; k++) {
+        // if (numList.filter(item => item.includes(0))) {
+        //   alert("scream");
+        //   numList.splice(j, 1, "j");
+//         }
+        // if(numList[j].indexOf(0) != -1) {
+        //   alert(numList[j]);
+        // }
+      // }
+    }
+    alert(numList.indexOf(0));
 
 
-    // for (var j = 0; j < inputNum; j++) {
-    //   if (numList[j] % 3 === 0) {
-    //     list.splice(j, 1, "HAL");
-    //   }
-      // else if (numList[j].includes(1)) {
-      //   numList.splice(j, 1, "Boop!");
-      // }
-      // else if (numList[j].includes(0)) {
-      //   numList.splice(j, 1, "Beep!");
-      // }
-    // }
+
+    for (var j = 0; j < inputNum; j++) {
+      
+        if (numList[j].includes(1)) {
+          numList.splice(j, 1, "Boop!");
+        }
+        else if (numList[j].includes(0)) {
+          numList.splice(j, 1, "Beep!");
+        }
+    }
 
     alert(numList.length);
     $("#result").show().text(numList);
