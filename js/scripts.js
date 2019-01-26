@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputNum = parseInt($("#input").val());
-    var a = [];
+    var searcher = [];
     // var b = [];
     // var c = [];
 
@@ -18,30 +18,31 @@ $(document).ready(function() {
     var numList = [];
     for (var i = 0; i <= inputNum; i++) {
       numList.push(i);
+// HAL
       if (numList[i] % 3 === 0 && numList[i] !== 0) {
         numList.splice(i, 1, "HAL");
       }
+//--------------------------------------------------------------
+
+      else if (numList[i] % 3 !== 0 && numList[i] !== 0) {
+        searcher.push(i);
+        searcher.toString();
+        searcher.join('');
+        if (searcher.includes("1")) {
+          numList.splice(i, 1, "Boop!");
+          searcher.split(' ');
+          searcher.shift();
+          // }
+          // else {
+          //   searcher.split(" ");
+          //   searcher.shift();
+        }
+      }
+
+//--------------------------------------------------------------
     }
+//--------------------------------------------------------------
 
-
-
-      //   else if (numList[j] % 3 !== 0) {
-      //     a.push(j);
-      //     a.toString();
-      //     alert(scream);
-      //     if (a.includes("0")) {
-      //       numList.splice(j, 1, "Beep!");
-      //       a.split(" ");
-      //       a.shift();
-      //       alert(scream);
-      //     }
-      //     else {
-      //       alert(scream);
-      //       a.split(" ");
-      //       a.shift();
-      //     }
-      //   }
-      // }
 
 
 
@@ -57,6 +58,7 @@ $(document).ready(function() {
 
 
     alert(numList.length);
+    alert(searcher.length);
     $("#result").show().text(numList);
   });
   $("#clear").submit(function(event) {
