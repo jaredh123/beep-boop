@@ -16,9 +16,10 @@ This webpage takes an input number from the user and responds with text on the w
 
 * Navigate to my GitHub account with user-name "jaredh123".
 * Copy the url from the specific repository and git clone on to your computer.
-* You can also view the webpage at https://jaredh123.github.io/track-suggester/
+* You can also view the webpage at https://jaredh123.github.io/beep-boop/
 
 ## Known Bugs
+
 No known bugs.
 
 
@@ -33,9 +34,11 @@ Email: jared.hanson12345@gmail.com
 * HTML
 * CSS
 * JavaScript
+* Bootstrap
+* jQuery
 
 ### License
 
 MIT
 
-Copyright (c) 2019
+Copyright (c) 2019 Jared Hanson
