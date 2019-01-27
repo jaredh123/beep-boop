@@ -1,9 +1,10 @@
 $(document).ready(function() {
-//To display list
+//To display correct order list-------------------
   $("#run").submit(function(event) {
     event.preventDefault();
 
     var inputNum = parseInt($("#input").val());
+//-----User logic above--Business logic below-----
     var numList = [];
 
     for (var i = 0; i <= inputNum; i++) {
@@ -25,11 +26,12 @@ $(document).ready(function() {
   });
 
 
-// To display reversed order list
+// To display reversed order list-----------------
   $("#reverse").submit(function(event) {
     event.preventDefault();
 
     var inputNum = parseInt($("#input").val());
+//-----User logic above--Business logic below-----
     var reverseList = [];
 
     for (var i = inputNum; i >= 0; i--) {
@@ -51,7 +53,7 @@ $(document).ready(function() {
   });
 
 
-// To clear results
+// To clear results-------------------------------
   $("#clear").submit(function(event) {
     event.preventDefault();
     $("#result").hide();
