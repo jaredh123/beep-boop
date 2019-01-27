@@ -8,24 +8,32 @@
     <title>Beep Boop</title>
   </head>
   <body>
-
-    <form  id="run">
-      <h3>Enter a number</h3>
-      <input type="number" id="input">
+    <div class="container">
+      <h1>Beep Boop</h1>
+      <p>Any positive number entered in the text box below will be turned into an ordered list of integers from 0 through the input.</p>
+      <p>Any number in the list that is divisible by "3" will be changed to reference 2001: A Space Odyssey.</p>
+      <p>Any remaining number in the list that contains a "1" in any of its digits will be replaced with <em>"Boop!"</em></p>
+      <p>Any remaining number in the list that contains a "0" in any of its digits will be replaced with <em>"Beep!"</em></p>
       <br>
-      <button type="submit" class="button btn-success">Show results</button>
-    </form>
+      <h4>Please enter a number</h4>
 
-    <form id="reverse">
-      <button type="submit" class="button btn-danger">Reverse results</button>
-    </form>
+      <form  id="run">
+        <input type="number" id="input">
+        <br>
+        <button type="submit" class="button btn-success">Show results</button>
+      </form>
 
-    <form id="clear">
-      <button type="submit" class="button btn-warning">Clear results</button>
-    </form>
-    
-    <br>
-    <br>
-    <span id="result"></span>
+      <form id="reverse">
+        <button type="submit" class="button btn-danger">Reverse results</button>
+      </form>
+
+      <form id="clear">
+        <button type="submit" class="button btn-warning">Clear results</button>
+      </form>
+
+      <br>
+      <br>
+      <span id="result"></span>
+    </div>
   </body>
 </html>
