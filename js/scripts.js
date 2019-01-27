@@ -1,52 +1,57 @@
-//  Responses:
-//  "I'm sorry, Dave. I'm afraid I can't do that."
-//  "Boop!"
-//  "Beep!"
-
-
 $(document).ready(function() {
+//To display list
   $("#run").submit(function(event) {
     event.preventDefault();
 
     var inputNum = parseInt($("#input").val());
-
-
-
-// Creates array of numbers from 0 through input
     var numList = [];
-    for (var i = 0; i <= inputNum; i++) {
 
+    for (var i = 0; i <= inputNum; i++) {
       if (i % 3 === 0 && i !== 0) {
-        numList.push("HAL");
+        numList.push(" I'm sorry, Dave. I'm afraid I can't do that.");
       }
-//--------------------------------------------------------------
-      else if ((i.toString().includes("1"))) {
-        numList.push("1");
+      else if (i.toString().includes("1")) {
+        numList.push(" Boop!");
       }
-      else if ((i.toString().includes("0"))) {
-        numList.push("0");
+      else if (i.toString().includes("0")) {
+        numList.push(" Beep!");
       }
       else {
-        numList.push(i);
+        numList.push(" " + i);
       }
-//--------------------------------------------------------------
     }
-//--------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-    alert(numList.length);
-  //  alert(searcher.length);
     $("#result").show().text(numList);
   });
 
+
+// To display reversed order list
+  $("#reverse").submit(function(event) {
+    event.preventDefault();
+
+    var inputNum = parseInt($("#input").val());
+    var reverseList = [];
+
+    for (var i = inputNum; i >= 0; i--) {
+      if (i % 3 === 0 && i !== 0) {
+        reverseList.push(" I'm sorry, Dave. I'm afraid I can't do that.");
+      }
+      else if (i.toString().includes("1")) {
+        reverseList.push(" Boop!");
+      }
+      else if (i.toString().includes("0")) {
+        reverseList.push(" Beep!");
+      }
+      else {
+        reverseList.push(" " + i);
+      }
+    }
+
+    $("#result").show().text(reverseList);
+  });
+
+
+// To clear results
   $("#clear").submit(function(event) {
     event.preventDefault();
     $("#result").hide();
